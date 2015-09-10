@@ -28,10 +28,26 @@ http-server
 ## JavaScript concepts
 1. Explain what hoisting is. Provide your answer below.
 
-  **Student answer: **
+  **Student answer: Hoisting is a behavior where a variable declartaion is moved to the top of a function. It can be used before it has been declared** 
+
 1. What is a callback? Why do we use them in JavaScript? Provide your answer, and code a simple example below.
 
-  **Student answer: **
+  **Student answer: a callback function is a function that is passed in as an argument to another "higher-order"function. Callbacks are used in javascript to prevent "blocking" 
+
+Example:
+  function fullName(firstName, lastName, callback){
+  console.log("My name is " + firstName + " " + lastName);
+  callback(lastName);
+}
+
+var greeting = function(ln){
+  console.log('Welcome Mrs. ' + ln);
+};
+
+fullName("Mary", "Kergosien", greeting); **
+
+
+
 
 ## Functions and operators
 
@@ -60,20 +76,29 @@ http-server
 
 1. Write a function named `getAnimals` that uses the jQuery `ajax` method to retrieve the `data/animals.json` file. When you execute the functions, it should just log *just the array* of animals to the console when the async is complete. Make sure you provide a prompt of "animals" when logging the array.
 1. What are the four HTTP verbs that you can use in an XHR that correspond to the CRUD actions (create, read, update, delete)?
-  **Student answer:**
+  **Student answer:  GET, POST, PUT, DELETE **
 
 1. Why did we use Promises when dealing with asynchronous XHR calls?
-  **Student answer:**
+  **Student answer: A promise will wait until the asynchronous XHR call is made to receive a response or error. A function will not execute until the promise returns a response. **
 
 1. Provide a simple example of the syntax for handling a Promise.
-  **Student answer:**
+  **Student answer: function promise() {
+  var deferred = Q.defer();
+  $.ajax({
+    url: 'data.json'
+  }).done(function(data) {
+    deferred.resolve(data);
+  }).error(function(error) {
+    deferred.reject(error);
+  });
+  return deferred.promise;
+} **
 
 ## Scope and this
 
 What gets logged to the console when the following code executes? Explain why.
 
-**Student answer: **
-
+**Student answer: **  Never got scopes.... still dont get scopes ={ Can you explain What and Why to me?? 
 ```
 var answer = "42";
 

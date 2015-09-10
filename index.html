@@ -10,15 +10,15 @@
 <body>
 
   <article class="main-article">
-    <section>First sibling
-      <ul>
+    <section >First sibling
+      <ul class="selectFirst">
         <li>First sibling -> A</li>
         <li>First sibling -> B</li>
         <li>First sibling -> C</li>
         <li>First sibling -> D</li>
       </ul>
     </section>
-    <section>
+    <section class="selectSecond">
       Second sibling
       <aside>Second sibling -> aside 1</aside>
       <aside>Second sibling -> aside 2</aside>
@@ -35,21 +35,30 @@
     <section>Fourth sibling</section>
   </article>
 
-  <div>
+
+  <div class="floatRight">
     I should be on the right side of the screen
   </div>
-  <div>
+  <div class="floatLeft">
     I should be on the left side of the screen
   </div>
-  <div>
+  <div class="iAmAlreadyRenderedBelow">
     I should render below my two siblings
   </div>
 
   <div id="vanilla_output"></div>
   <div id="jquery_output"></div>
-  
 
-  <script src="lib/bower_components/jquery/dist/jquery.min.js"></script>
-  <script src="javascripts/main.js"></script>
+
+<script src="lib/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="javascripts/main.js"></script>
+<script src="javascripts/IIFE.js"></script>
+<script src="javascripts/AugmentedIIFE.js"></script>
+
+
+<script> document.getElementById("vanilla_output").innerHTML = "This content generated with vanilla JavaScript"; </script>
+<script>  $("#jquery_output").replaceWith("This content generated with jQuery"); </script>
+
+ 
 </body>
 </html>

@@ -1,0 +1,23 @@
+.selectFirst {
+  display: inline;
+}
+
+.selectFirst :nth-child(2n+1){
+  border: 2px solid black;
+}
+
+.selectFirst :nth-child(2n+0) {
+  background-color: lime;
+}
+
+.selectSecond :first-of-type{
+  color: blue;
+}
+
+.floatRight{
+  text-align: right;
+}
+
+.floatLeft{
+  text-align: left;
+}
